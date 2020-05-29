@@ -53,3 +53,8 @@ a komunikuje s Gsheets - získává data a stavy dostupností (snadnější poč
 
 <p>V jednoduchosti tento skript zjistí co má chybně nastavenou dostupnost a vytvoří aktualizační soubor pro API a změní XML feedy.Probíhá cca hodinově.
 
+## feed_sender.py
+<p> Přebírá naše nově vytvořené JSON soubory a posílá je přes API do obchodů, tím tak probíhá k aktualizaci dostupnosti v obchodech. Znovu cca hodinově podle CRONU.<br>
+  
+## settings.py
+<p>Pouze základní informace, jako adresy, hesla apod. Samozřejmě by mělo být řešeno lépe ale jedná se o menší projekt,takže takto stačí.

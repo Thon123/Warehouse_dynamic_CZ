@@ -9,7 +9,7 @@ from email_sender import Posli_email
 """________________________________[STÁHNE A ULOŽÍ XML NA DISK]_________________________"""
 
 def stahne_feed(nazev_feedu, url):
-    #global root
+    """Funcke pro stažení XMl feedu"""
     xmldata = requests.get(url)
     with open(nazev_feedu, 'wb') as nazev_feedu:
         nazev_feedu.write(xmldata.content)
@@ -34,7 +34,7 @@ def vydoluj_feed(nazev_feedu):
                         kod_dod.append(child.text) #jasne
                 root.clear() #po jedné sekvcni čistím - nepřehltím pamět
 
-"""ZDE ŘEŠENÍ právě aby to nenatáhlo přes 4-5gb RAM"""
+#ZDE ŘEŠENÍ právě aby to nenatáhlo přes 4-5gb RAM - life saver
 #https://stackoverflow.com/questions/35308623/in-pythons-elementree-
 # library-how-to-use-iterparse-only-for-the-outer-level
 

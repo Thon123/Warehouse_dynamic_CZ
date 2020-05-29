@@ -19,7 +19,7 @@
 <strong>2</strong> - Rozparsuje b2b feed a získá počty a kody produktů<br>
 <strong>3</strong> - Aktualizuje data tzn. průnik skladu x feedu<br>
 <strong>4</strong> - Nahraje stavy od dodavatele do Gsheets skladu<br>
-<strong>Operce běží v Cronu každou 2 minutu v hodině, stačilo by 3x denně - záleží i na akautlizaci stavu u dodavatele</strong>
+<strong>Operce běží v Cronu každou 2 minutu v hodině, stačilo by 3x denně - záleží i na aktualizaci stavu u dodavatele</strong>
   
 ## bluuu.py
 

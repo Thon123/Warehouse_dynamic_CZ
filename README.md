@@ -21,5 +21,9 @@
 <strong>4</strong> - Nahraje stavy od dodavatele do Gsheets skladu<br>
 <strong>Operce běží v Cronu každou 2 minutu v hodině, stačilo by 3x denně - záleží i na aktualizaci stavu u dodavatele</strong>
   
+## email_sender.py
+<p>Zpětná vazba v případě výpadků apod. Jakmile nějaký kod selže zasílá email.<br>
+  <strong>TODO: opravit čas - je vytvářen v bodě vzniku funkce!</strong>
+  
 ## bluuu.py
 

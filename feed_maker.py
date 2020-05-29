@@ -67,8 +67,8 @@ def prunik_dat(nazev_feedu):
 
 """______________________________________[TVORBA KOŠÍKU ]_________________________________"""
 
-#MUSÍM DOGENEROVAT TAG - LZE VLOZIT DO KOSIKU - ten definujeme dle dostupnosti
 def kosik_dostupnost():
+    """MUSÍM DOGENEROVAT TAG - LZE VLOZIT DO KOSIKU - ten definujeme dle dostupnosti"""
     for i in range(len(d_akt)): #pro celý list dostupnost iterujeme
         #logika je jasná skladem a do týdne = 1, není skladem = 0
         if d_akt[i] == "Není skladem" or d_akt[i] == "Nie je na sklade":
@@ -77,8 +77,9 @@ def kosik_dostupnost():
             kosik_akt.append("1") #jinak dáváme defaultně za 0
 
 """______________________________[_JSON_AKTUALIZACNI_SOUBOR]___________________________"""
-#JINÁ FORMA AKTUALIZACE - SKRZE JSON SOUBOR
+
 def novy_json(json_nazev):
+    """Aktualizační soubor - json"""
     for i in range(len(c_akt)):   
         prubezny["code"] = c_akt[i] #zakladá dict s kodem
         prubezny["availability"] = d_akt[i] #přidá dostupnost
@@ -100,6 +101,7 @@ def novy_json(json_nazev):
 #Upravím základní feed o to co jsem upravil na eshopu - LZE VYPNOUT pokud nebude OK
 
 def zpetne_aktualizuj(nazev_feedu): #původní feed upravím o rozdílná data
+    """Zpětně přehrajeme XML feed - zmenšíme z 1gb jen na to co je nové"""
     with open(nazev_feedu, encoding="utf8") as file:
         xml = file.read().encode()
         root = etree.fromstring(xml) #otevřeli jsme a z parsovali jsme feed
@@ -123,7 +125,9 @@ def zpetne_aktualizuj(nazev_feedu): #původní feed upravím o rozdílná data
 
 #DÁM TO DO SMYČKY - znovu moje opakování s WHILE není ideální prozatím
 #číslo sloupce slouží pro dostupnost a jazykovou lokalizaci 14 yescom a nb, 15ep
+
 def feed_maker(nazev_feedu, json_nazev, cislo_sloupce):
+    """finální funkce - stáhne, upraví, vytvoří soubor pro api, a aktualizační xml"""
     i = 0
     while i !=5: #definuji i smyčku pro 5 pokusů - jistota
         try:
@@ -154,6 +158,7 @@ sc_akt, d_akt, c_akt, kosik_akt, products  = [], [], [], [], []
 
 
 def main():
+    """pouze souhrn pro 3 obchody"""
     feed_maker("nabitabaterka.xml","nabitabaterka.json",14)
     feed_maker("yescom.xml","yescom.json",14)
     feed_maker("ep.xml","ep.json",15)

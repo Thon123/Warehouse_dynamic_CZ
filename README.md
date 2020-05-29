@@ -39,10 +39,17 @@ V podstatě feedy zmenší. Feedu mají i 1gb takže poměrně náročné na pam
 <strong>TODO: ověřovat dostupnost url na kod 200</strong><br>
 <strong>Sciprt beží na servru jen 1x denně, cca 1 hodinu po XML aktualizace ze strany obchodů.</strong><br>
 
-# bluuuuuu.py
+## feed_maker.py
+Nejspíše nejnáročnější soubor. Pracuje s xml feedy, vytváří aktualizace pro eshopy v json, zpětně aktualizuje xml feedy<br>
+a komunikuje s Gsheets - získává data a stavy dostupností (snadnější počítat v Gsheets - pre calculated :))
+
 <strong>Postup:</strong><br>
-<strong>1</strong><br>
-<strong>2</strong><br>
-<strong>3</strong><br>
-<strong>4</strong><br>
+<strong>1</strong> - první fázi načeteme dostupnosti z GSheets - tzn. jaký produkt má být skladem, do týdne apod. a hlavně upravíme lokalizaci pro CZ i SK<br>
+<strong>2</strong> - provedeme průnik skladu a zmenšeného xml feedu a hledáme to co se neshoduje => shoda skladu a feexu znamená, že je dostupnost určená správně, pouze to co se neshoduje se musí upravit v obchodě<br>
+<strong>3</strong> - generujeme hodnoty pro vložení do košíku (pokud není skladem musíme zamezit možnost koupení)<br>
+<strong>4</strong> - vytváříme dle našeho průniku dat a košíku JSON soubor - ten se pošle skrze API do obchodů a změní dostupnosti, kde supplier kod je hlavní prpopojovací článek<br>
+<strong>5</strong> - zpětně aktualizujeme feed - musíme jej zmenšit pouze na stav NESHODY abychom stále dkonal neposílali přes API duplicitní hodnoty<br>
+<strong>6</strong> - Na závěr pouze celý proces pro všechny obchody<br>
+
+<p>V jednoduchosti tento skript zjistí co má chybně nastavenou dostupnost a vytvoří aktualizační soubor pro API a změní XML feedy.Probíhá cca hodinově.
 

@@ -14,7 +14,7 @@
 
 ## b2b_loader.py
 <p> Připojí se na dodavatele disponující stavy produktů a nahrává je do Gsheets. <br>
-<strong>Postup:</strong>
+<strong>Postup:</strong><br>
 <strong>1</strong> - Získá data z Gsheets => kody produktů, které má hledat ve feedu (aby knim našel počty)<br>
 <strong>2</strong> - Rozparsuje b2b feed a získá počty a kody produktů<br>
 <strong>3</strong> - Aktualizuje data tzn. průnik skladu x feedu<br>

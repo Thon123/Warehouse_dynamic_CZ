@@ -19,6 +19,7 @@
 <strong>2</strong> - rozparsuje b2b feed a získá počty a kody produktů<br>
 <strong>3</strong> - aktualizuje data tzn. průnik skladu x feedu<br>
 <strong>4</strong> - nahraje stavy od dodavatele do Gsheets skladu<br>
+
 <strong>Operce běží v Cronu každou 2 minutu v hodině, stačilo by 3x denně - záleží i na aktualizaci stavu u dodavatele.</strong>
   
 ## email_sender.py
@@ -34,7 +35,9 @@ V podstatě feedy zmenší. Feedu mají i 1gb takže poměrně náročné na pam
 <strong>2</strong> - rozparsujeme feedy - přes event a čistění paměti => jinak se přehltí a server spadne<br>
 <strong>3</strong> - feed zmenšíme v podstatě chceme - kod produktu, dodavatelský kod a dostupností stav<br>
 <strong>4</strong> - provedeme pro všechyn tři obchody naráz<br>
+
 <strong>TODO: ověřovat dostupnost url na kod 200</strong><br>
+<strong>Sciprt beží na servru jen 1x denně, cca 1 hodinu po XML aktualizace ze strany obchodů.</strong><br>
 
 # bluuuuuu.py
 <strong>Postup:</strong><br>

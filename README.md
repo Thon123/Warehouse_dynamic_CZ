@@ -13,7 +13,7 @@
 <p>Pouze pro propojeí Gsheets a Pythonu, nic víc. Generován až po vytvoření connectu.</br>
 
 ## b2b_loader.py
-<p> Připojí se na dodavatele disponující stavy produktů a nahrává je do Gsheets. <br>
+<p> Připojí se na dodavatele disponující stavy produktů a nahrává je do Gsheets.</p> <br>
 <strong>Postup:</strong><br>
 <strong>1</strong> - Získá data z Gsheets => kody produktů, které má hledat ve feedu (aby knim našel počty)<br>
 <strong>2</strong> - Rozparsuje b2b feed a získá počty a kody produktů<br>
@@ -31,9 +31,9 @@ V podstatě feedy zmenší. Feedu mají i 1gb takže poměrně náročné na pam
 <strong>Postup:</strong><br>
 <strong>1</strong>Stáhneme XML feedy z eshopů a uložíme na disk (server cca 20gb zde max 3gb) <br>
 <strong>2</strong>Rozparsujeme feedy - přes event a čistění paměti => jinak se přehltí a server spadne<br>
-<strong>3</strong><br>Feed zmenšíme v podstatě chceme - kod produktu, dodavatelský kod a dostupností stav
-<strong>4</strong><br>Provedeme pro všechyn tři obchody naráz
-<strong>TODO: ověřovat dostupnost url na kod 200</strong>
+<strong>3</strong>Feed zmenšíme v podstatě chceme - kod produktu, dodavatelský kod a dostupností stav<br>
+<strong>4</strong>Provedeme pro všechyn tři obchody naráz<br>
+<strong>TODO: ověřovat dostupnost url na kod 200</strong><br>
 
 # bluuuuuu.py
 <strong>Postup:</strong><br>

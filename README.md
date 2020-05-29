@@ -25,5 +25,20 @@
 <p>Zpětná vazba v případě výpadků apod. Jakmile nějaký kod selže zasílá email.<br>
   <strong>TODO: opravit čas - je vytvářen v bodě vzniku funkce!</strong>
   
-## bluuu.py
+## feed_cutter_v2.py
+Skript, který 1x za den (cca ve 4 hodiny ráno) stáhne XML feedy ze tří online obchodů a vydoluje znich potebná data.<br>
+V podstatě feedy zmenší. Feedu mají i 1gb takže poměrně náročné na paměť.<br>
+<strong>Postup:</strong><br>
+<strong>1</strong>Stáhneme XML feedy z eshopů a uložíme na disk (server cca 20gb zde max 3gb) <br>
+<strong>2</strong>Rozparsujeme feedy - přes event a čistění paměti => jinak se přehltí a server spadne<br>
+<strong>3</strong><br>Feed zmenšíme v podstatě chceme - kod produktu, dodavatelský kod a dostupností stav
+<strong>4</strong><br>Provedeme pro všechyn tři obchody naráz
+<strong>TODO: ověřovat dostupnost url na kod 200</strong>
+
+# bluuuuuu.py
+<strong>Postup:</strong><br>
+<strong>1</strong><br>
+<strong>2</strong><br>
+<strong>3</strong><br>
+<strong>4</strong><br>
 
